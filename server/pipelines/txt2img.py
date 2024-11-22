@@ -85,10 +85,10 @@ class Pipeline:
           self.pipe = DiffusionPipeline.from_pretrained(
             base_model, safety_checker=None, torch_dtype=torch_dtype
         )
-        if args.taesd:
-            self.pipe.vae = AutoencoderKL.from_pretrained(
-                taesd_model, torch_dtype=torch_dtype, use_safetensors=True
-            ).to(device)
+        #if args.taesd:
+            #self.pipe.vae = AutoencoderKL.from_pretrained(
+            #    taesd_model, torch_dtype=torch_dtype, use_safetensors=True
+            #).to(device)
 
         if args.sfast:
             from sfast.compilers.stable_diffusion_pipeline_compiler import (

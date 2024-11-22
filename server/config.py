@@ -11,11 +11,11 @@ class Args(NamedTuple):
     timeout: float
     safety_checker: bool
     torch_compile: bool
-    taesd: bool
     pipeline: str
     ssl_certfile: str
     ssl_keyfile: str
     sfast: bool
+    taesd: bool = False
     onediff: bool = False
     compel: bool = False
     debug: bool = False
